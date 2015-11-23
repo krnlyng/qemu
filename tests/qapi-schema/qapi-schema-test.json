@@ -52,7 +52,6 @@
   'data': { 'unused1':['UserDefOne'], 'unused2':['UserDefTwo'],
             'unused3':['TestStruct'] } }
 
-# for testing unions
 # Among other things, test that a name collision between branches does
 # not cause any problems (since only one branch can be in use at a time),
 # by intentionally using two branches that both have a C member 'a_b'

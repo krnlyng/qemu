@@ -93,7 +93,7 @@ extern bool tcg_target_deposit_valid(int ofs, int len);
 enum {
     TCG_AREG0 = TCG_REG_R6,
 };
-
+#define __builtin___clear_cache __clear_cache
 static inline void flush_icache_range(uintptr_t start, uintptr_t stop)
 {
 #if QEMU_GNUC_PREREQ(4, 1)

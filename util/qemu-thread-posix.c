@@ -10,6 +10,7 @@
  * See the COPYING file in the top-level directory.
  *
  */
+#include "linux_atomic.c"
 #include <stdlib.h>
 #include <stdio.h>
 #include <errno.h>

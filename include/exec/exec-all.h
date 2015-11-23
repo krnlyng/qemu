@@ -284,7 +284,7 @@ static inline void tb_set_jmp_target1(uintptr_t jmp_addr, uintptr_t addr)
     *(uint32_t *)jmp_addr =
         (*(uint32_t *)jmp_addr & ~0xffffff)
         | (((addr - (jmp_addr + 8)) >> 2) & 0xffffff);
-
+#define __builtin___clear_cache __clear_cache
 #if QEMU_GNUC_PREREQ(4, 1)
     __builtin___clear_cache((char *) jmp_addr, (char *) jmp_addr + 4);
 #else

@@ -16,6 +16,7 @@
  *  You should have received a copy of the GNU General Public License
  *  along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
+#define O_CLOEXEC	02000000
 #define _ATFILE_SOURCE
 #include <stdlib.h>
 #include <stdio.h>

@@ -479,6 +479,12 @@ bool aio_poll(AioContext *ctx, bool blocking)
 
     return progress;
 }
+#define EPOLL_CLOEXEC 02000000
+#include <syscall.h>
+int epoll_create1(int flags)
+{
+		return syscall(SYS_epoll_create1, flags);
+}
 
 void aio_context_setup(AioContext *ctx, Error **errp)
 {

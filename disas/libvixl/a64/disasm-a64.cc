@@ -1362,7 +1362,8 @@ void Disassembler::AppendPCRelativeOffsetToOutput(const Instruction* instr,
                                                   int64_t offset) {
   USE(instr);
   char sign = (offset < 0) ? '-' : '+';
-  AppendToOutput("#%c0x%" PRIx64, sign, std::abs(offset));
+  uint64_t absoffset = (offset < 0) ? -offset : offset;
+  AppendToOutput("#%c0x%" PRIx64, sign, absoffset);
 }
 
 
